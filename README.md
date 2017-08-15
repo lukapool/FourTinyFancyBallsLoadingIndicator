@@ -7,6 +7,7 @@ A Loading Indicator Inspired by [Pelly Benassi](https://dribbble.com/shots/37120
 
 ##  安装
 复制 LKAFTFBLoadingIndicatorView.h / LKAFTFBLoadingIndicatorView.m 到你的工程
+
 导入头文件
 ```
 #import "LKAFTFBLoadingIndicatorView.h"

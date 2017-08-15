@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLI-Zt-VEe" customClass="LKAFTFBLoadingIndicatorView">
+                                <rect key="frame" x="127" y="273.5" width="120" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Ste-xy-7d2"/>
+                                    <constraint firstAttribute="height" constant="120" id="ppe-tA-Uc8"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="neg-hj-zpy">
+                                <rect key="frame" x="94.5" y="549" width="186" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8B-O1-qha">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
+                                        <state key="normal" title="START"/>
+                                        <connections>
+                                            <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ss9-Ad-KfK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYS-ka-Edh">
+                                        <rect key="frame" x="147" y="0.0" width="39" height="30"/>
+                                        <state key="normal" title="STOP"/>
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FYL-xf-aUv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bA-9O-cQD" customClass="LKAFTFBLoadingIndicatorView">
+                                <rect key="frame" x="167" y="183.5" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="8xK-e0-O27"/>
+                                    <constraint firstAttribute="height" constant="40" id="n4h-A3-taX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QLI-Zt-VEe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Djx-fQ-00c"/>
+                            <constraint firstItem="QLI-Zt-VEe" firstAttribute="top" secondItem="0bA-9O-cQD" secondAttribute="bottom" constant="50" id="QI8-e3-Fdf"/>
+                            <constraint firstItem="0bA-9O-cQD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qQy-Qf-dua"/>
+                            <constraint firstItem="QLI-Zt-VEe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qfO-dc-fo3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="neg-hj-zpy" secondAttribute="bottom" constant="88" id="sOA-OZ-2Cc"/>
+                            <constraint firstItem="neg-hj-zpy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sgW-vh-9Hb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="QLI-Zt-VEe" id="LL1-Ko-Cx7"/>
+                        <outlet property="smallIndicator" destination="0bA-9O-cQD" id="fW7-b0-zUG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
